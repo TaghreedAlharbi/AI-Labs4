@@ -1,0 +1,57 @@
+Task 2 - Family Queries
+
+1. ?- female(X).
+
+Result:
+X = sara ;
+X = nora.
+
+Reason:
+Sara and Nora are the female members listed in the family facts.
+
+
+2. ?- male(_).
+
+Result:
+true.
+
+Reason:
+At least one male exists in the family facts.
+
+
+3. ?- parent(Grandparent, Parent), parent(Parent, faisal).
+
+Result:
+Grandparent = ali,
+Parent = muhammad.
+
+Reason:
+Ali is the parent of Muhammad, and Muhammad is the parent of Faisal, so Ali is Faisal's grandparent.
+
+
+4. ?- parent(ahmad, Daughter), female(Daughter).
+
+Result:
+Daughter = sara ;
+Daughter = nora.
+
+Reason:
+Sara and Nora are children of Ahmad and both are female.
+
+
+5. ?- parent(Parent, ahmad), parent(Parent, muhammad).
+
+Result:
+Parent = ali.
+
+Reason:
+Ali is the parent of both Ahmad and Muhammad, so they have a common parent.
+
+
+6. ?- male(khan), parent(Parent, khan), parent(Parent, nora).
+
+Result:
+Parent = ahmad.
+
+Reason:
+Khan is male, and both Khan and Nora have Ahmad as their parent, so Khan is Nora's brother.
